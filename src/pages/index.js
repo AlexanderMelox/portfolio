@@ -1,5 +1,6 @@
-import React from "react"
+import React from 'react'
+import Layout from '../components/layout'
 
-const IndexPage = () => <div>Welcome to my home page</div>
+const IndexPage = () => <Layout>Welcome to my home page</Layout>
 
 export default IndexPage
