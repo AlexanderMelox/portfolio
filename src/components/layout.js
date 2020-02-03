@@ -8,8 +8,8 @@ import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const globalStyles = css`
   :root {
-    /* spacing */
-    --space-small: 3rem;
+    /* Typography */
+    --body-font: 'Dank Mono', 'Courier Neue', monospace;
   }
 
   @font-face {
@@ -23,10 +23,6 @@ const globalStyles = css`
     padding: 0;
   }
 
-  * + * {
-    margin-top: 1rem;
-  }
-
   html {
     font-size: 62.5%;
   }
@@ -36,19 +32,27 @@ const globalStyles = css`
     margin: 0;
     background-color: #000;
     color: #fcfcfc;
-    font-family: 'Dank Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: 'Dank Mono';
   }
 
   body {
     font-size: 1.8rem;
+    line-height: 1.6;
   }
 
   a:link,
   a:visited {
     color: #fff;
     text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--heading-font);
   }
 `
 
