@@ -64,10 +64,21 @@ const globalStyles = css`
     background: var(--page-background-color);
   }
 
-  a:link,
-  a:visited {
+  a {
     color: var(--text-color-lighter);
     text-decoration: none;
+    transition: all 0.2s ease;
+    padding-bottom: 3px;
+
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 50% 1px;
+    background-position: bottom;
+
+    &:hover {
+      color: #fff;
+      background-size: 100% 1px;
+    }
   }
 
   h1,
@@ -78,6 +89,7 @@ const globalStyles = css`
   h6 {
     font-family: var(--primary-font-family);
     font-weight: 700;
+    line-height: 1.1;
   }
 `
 
