@@ -21,6 +21,7 @@ const StyledLogo = styled(Link)`
   font-size: 2rem;
   font-weight: 700;
   font-family: var(--primary-font-family);
+  background: none;
 
   :link,
   :visited {

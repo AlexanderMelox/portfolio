@@ -27,6 +27,8 @@ const LearnMoreButton = styled(Link)`
   position: relative;
   cursor: pointer;
   margin-top: 1rem;
+  font-weight: 500;
+}
 `
 
 const IndexPage = () => {
@@ -34,10 +36,15 @@ const IndexPage = () => {
     <Layout>
       <Intro>
         <Portrait />
-        <H1>Hi, I'm Alex 👋🏼</H1>
+        <H1>
+          Hi, I'm Alex{' '}
+          <span role="img" aria-label="Hand waving">
+            👋🏼
+          </span>
+        </H1>
         <Lead>
           I'm a UX Engineer at{' '}
-          <a target="_blank" href="https://ibm.com">
+          <a rel="noopener noreferrer" target="_blank" href="https://ibm.com">
             IBM
           </a>
           . I write code and I make shit happen.
