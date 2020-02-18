@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { keyframes } from '@emotion/core'
 
 const Bar = styled.span`
   position: absolute;
@@ -15,12 +14,12 @@ const Bar = styled.span`
 const TopBar = styled(Bar)`
   top: 0;
   transform-origin: left;
-  ${props => (props.isNavOpen ? 'transform: rotate(45deg);' : '')}
+  ${props => props.isNavOpen && 'transform: rotate(45deg)'}
 `
 const BottomBar = styled(Bar)`
   bottom: 0;
   transform-origin: right;
-  ${props => (props.isNavOpen ? 'transform: rotate(45deg);' : '')}
+  ${props => props.isNavOpen && 'transform: rotate(45deg);'}
 `
 
 const Button = styled.button`
@@ -33,12 +32,8 @@ const Button = styled.button`
   cursor: pointer;
   z-index: 200;
 
-  :hover {
-    ${TopBar} {
-    }
-
-    ${BottomBar} {
-    }
+  :focus {
+    outline: none;
   }
 `
 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
-import Container from './container'
+import Container from './common/container'
 import NavButton from './nav/nav-button'
 import Nav from './nav/nav'
 import styled from '@emotion/styled'
 
 const StyledHeader = styled.header`
-  margin-top: 8rem;
+  padding: 3rem 0;
   position: relative;
 `
 
@@ -19,8 +19,13 @@ const HeaderContainer = styled(Container)`
 
 const StyledLogo = styled(Link)`
   font-size: 2rem;
-  font-weight: 300;
-  z-index: 200;
+  font-weight: 700;
+  font-family: var(--primary-font-family);
+
+  :link,
+  :visited {
+    color: #fff;
+  }
 `
 
 const Header = props => {
