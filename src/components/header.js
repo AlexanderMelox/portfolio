@@ -8,13 +8,14 @@ import styled from '@emotion/styled'
 
 const StyledHeader = styled.header`
   padding: 3rem 0;
-  position: relative;
+  width: 100%;
+  position: ${({ navFixed }) => (navFixed ? 'fixed' : 'relative')};
 `
 
-const HeaderContainer = styled(Container)`
+const HeaderContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 `
 
 const StyledLogo = styled(Link)`
@@ -29,19 +30,21 @@ const StyledLogo = styled(Link)`
   }
 `
 
-const Header = props => {
+const Header = ({ navFixed }) => {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
   return (
-    <StyledHeader>
-      <HeaderContainer>
-        <StyledLogo to="/">Alexander Melo</StyledLogo>
-        <NavButton
-          isNavOpen={isNavOpen}
-          setIsNavOpen={() => setIsNavOpen(!isNavOpen)}
-        />
-        <Nav isNavOpen={isNavOpen} />
-      </HeaderContainer>
+    <StyledHeader navFixed={navFixed}>
+      <Container>
+        <HeaderContainer>
+          <StyledLogo to="/">melo.</StyledLogo>
+          <NavButton
+            isNavOpen={isNavOpen}
+            setIsNavOpen={() => setIsNavOpen(!isNavOpen)}
+          />
+          <Nav isNavOpen={isNavOpen} />
+        </HeaderContainer>
+      </Container>
     </StyledHeader>
   )
 }

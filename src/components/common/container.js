@@ -1,10 +1,14 @@
 import styled from '@emotion/styled'
 
 const Container = styled.div`
-  width: 100%;
-  max-width: 104rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 80vw 1fr;
+  grid-template-areas: 'left-gutter content right-gutter';
+  grid-auto-rows: auto;
+
+  & > * {
+    grid-area: content;
+  }
 `
 
 export default Container

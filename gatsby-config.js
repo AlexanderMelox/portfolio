@@ -3,6 +3,11 @@ module.exports = {
     title: `Alexander Melo | UX Engineer `,
     description: `Hey, I'm Alexander Melo and I'm a UX Engineer at IBM.`,
     author: `Alexander Melo`,
+    socialLinks: [
+      { name: 'Email', to: '#' },
+      { name: 'Twitter', to: '#' },
+      { name: 'Github', to: 'https://github.com/AlexanderMelox' },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,56 +1,41 @@
 import React from 'react'
-import styled from '@emotion/styled'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
-import Portrait from '../components/portrait'
+import { HeroText, Profile } from '../components/profile'
+import {
+  LandingHero,
+  Name,
+  SocialList,
+  SocialListItem,
+} from '../components/landing-hero'
 
-const Intro = styled.div`
-  padding: 10rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-`
-
-const H1 = styled.h1`
-  margin-top: 10rem;
-`
-
-const Lead = styled.p`
-  margin-top: 2.5rem;
-  font-size: 2rem;
-`
-
-const LearnMoreButton = styled(Link)`
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  margin-top: 1rem;
-  font-weight: 500;
-}
-`
+import { useSiteMetadata } from '../hooks'
 
 const IndexPage = () => {
+  const { socialLinks } = useSiteMetadata()
+
   return (
-    <Layout>
-      <Intro>
-        <Portrait />
-        <H1>
-          Hi, I'm Alex{' '}
-          <span role="img" aria-label="Hand waving">
-            👋🏼
-          </span>
-        </H1>
-        <Lead>
-          I'm a UX Engineer at{' '}
-          <a rel="noopener noreferrer" target="_blank" href="https://ibm.com">
-            IBM
-          </a>
-          . I write code and I make shit happen.
-        </Lead>
-        <LearnMoreButton to="/about">Learn more about me</LearnMoreButton>
-      </Intro>
+    <Layout navFixed>
+      <LandingHero>
+        <h1>
+          <Name to="/">
+            alexander<span>melo.</span>
+          </Name>
+        </h1>
+        <Profile>
+          <HeroText>
+            User Experience Engineer working for IBM in Austin, Texas.
+          </HeroText>
+          <SocialList>
+            {socialLinks.map(link => (
+              <SocialListItem>
+                <a rel="noopener noreferrer" href={link.to} target="_blank">
+                  {link.name}
+                </a>
+              </SocialListItem>
+            ))}
+          </SocialList>
+        </Profile>
+      </LandingHero>
     </Layout>
   )
 }

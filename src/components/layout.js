@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Global, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Helmet from 'react-helmet'
+import { normalize } from 'polished'
 
 import Header from './header'
-import Container from './common/container'
 
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const globalStyles = css`
+  ${normalize()};
+
   @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,900&display=swap');
   @font-face {
     font-family: 'Dank Mono';
@@ -28,16 +30,23 @@ const globalStyles = css`
 
     /* Colors */
     --licorice: #131217;
+    --onyx: #424145;
     --gainsboro: #d9d7e0;
-    --rebecca-purple: #663399;
+    --light-blue: #dacffc;
     --just-white: rgba(255, 255, 255, 0.8);
 
     --page-background-color: var(--licorice);
-    /* UI colors */
-    --text-color-lighter: var(--just-white);
+    /* Text colors */
+    --text-01: #f1f1f1;
+    --text-inverted: #6d6d6d;
     --text-color-darker: var(--gainsboro);
+    --text-color-inverted: var(--licorice);
 
-    --primary-color: var(--rebecca-purple);
+    --primary-color: var(--light-blue);
+
+    /* Theme color that changes */
+    --color: #e699a6;
+    /* ["#e699a6", "#e699d2", "#cc99e6", "#9f99e6", "#99bfe6", "#99e6df", "#99e6b3", "#ace699", "#d9e699", "#e6c699"] */
   }
 
   * {
@@ -67,18 +76,6 @@ const globalStyles = css`
   a {
     color: var(--text-color-lighter);
     text-decoration: none;
-    transition: all 0.2s ease;
-    padding-bottom: 3px;
-
-    background-image: linear-gradient(currentColor, currentColor);
-    background-repeat: no-repeat;
-    background-size: 50% 1px;
-    background-position: bottom;
-
-    &:hover {
-      color: #fff;
-      background-size: 100% 1px;
-    }
   }
 
   h1,
@@ -91,12 +88,81 @@ const globalStyles = css`
     font-weight: 700;
     line-height: 1.1;
   }
+
+  ul {
+    list-style: none;
+  }
 `
 
-const Main = styled(Container)``
+const Main = styled.main`
+  display: grid;
+  grid-template-columns: 1fr 80vw 1fr;
+  grid-template-areas: 'left-gutter content right-gutter';
+  grid-auto-rows: auto;
 
-const Layout = ({ children }) => {
+  & > * {
+    grid-area: content;
+  }
+`
+
+const Layout = ({ children, navFixed }) => {
   const { title, author, description } = useSiteMetadata()
+
+  const favicons = useMemo(() => [
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />,
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />,
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />,
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />,
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />,
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />,
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />,
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />,
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />,
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />,
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png"
+    />,
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicon-96x96.png"
+    />,
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png"
+    />,
+  ])
 
   return (
     <>
@@ -106,8 +172,11 @@ const Layout = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="author" content={author} />
+        {favicons}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#e699a6" />
       </Helmet>
-      <Header />
+      <Header navFixed={navFixed} />
       <Main>{children}</Main>
     </>
   )

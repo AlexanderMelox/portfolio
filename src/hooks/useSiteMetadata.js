@@ -8,6 +8,10 @@ const useSiteMetadata = () => {
           author
           description
           title
+          socialLinks {
+            name
+            to
+          }
         }
       }
     }
