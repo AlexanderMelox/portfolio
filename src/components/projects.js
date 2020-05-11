@@ -7,7 +7,7 @@ import Container from '../components/common/container'
 
 const StyledProjects = styled.section`
   width: 100%;
-  padding: 5vw 0;
+  padding: 6vw 0;
   background-color: var(--color);
   transition: background-color 2s ease-in-out;
   transform: translateY(
@@ -40,8 +40,10 @@ const Projects = () => {
       name: 'COVID-19 GraphQL',
       to: 'https://github.com/AlexanderMelox/COVID19-GraphQL-Wrapper',
     },
-    { name: 'Project 2', to: '#' },
-    { name: 'Project 3', to: '#' },
+    {
+      name: 'More projects coming soon...',
+      to: '#',
+    },
   ])
 
   const headerHeight = useHeaderHeight()

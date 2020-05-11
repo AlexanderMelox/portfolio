@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 
-export const Profile = styled.div`
+export const Profile = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-direction: column;
