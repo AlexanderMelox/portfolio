@@ -3,11 +3,7 @@ import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 
 export const LandingHero = styled.section`
-  height: calc(
-    99vh -
-      ${({ headerBarHeight }) =>
-        headerBarHeight ? headerBarHeight + 'px' : '0'}
-  );
+  height: calc(99vh - 92px);
   display: flex;
   justify-content: center;
   align-items: flex-start;

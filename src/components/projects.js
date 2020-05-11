@@ -1,7 +1,5 @@
 import React, { useMemo } from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
-import { useHeaderHeight } from '../hooks'
 
 import Container from '../components/common/container'
 
@@ -10,9 +8,7 @@ const StyledProjects = styled.section`
   padding: 6vw 0;
   background-color: var(--color);
   transition: background-color 2s ease-in-out;
-  transform: translateY(
-    calc(96vh - ${({ headerHeight }) => headerHeight + 'px'})
-  );
+  transform: translateY(calc(96vh - 92px));
 `
 
 const ProjectList = styled.ul`
@@ -46,10 +42,8 @@ const Projects = () => {
     },
   ])
 
-  const headerHeight = useHeaderHeight()
-
   return (
-    <StyledProjects headerHeight={headerHeight}>
+    <StyledProjects>
       <Container>
         <ProjectList>
           {projects.map(project => (

@@ -14,11 +14,10 @@ import { changeColor } from '../utils/keyframes'
 import { css } from '@emotion/core'
 import { motion } from 'framer-motion'
 
-import { useSiteMetadata, useHeaderHeight } from '../hooks'
+import { useSiteMetadata } from '../hooks'
 
 const IndexPage = () => {
   const { socialLinks } = useSiteMetadata()
-  const headerBarHeight = useHeaderHeight()
 
   const nameVariants = {
     enter: {
