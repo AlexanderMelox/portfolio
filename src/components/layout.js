@@ -38,15 +38,19 @@ const globalStyles = css`
     --page-background-color: var(--licorice);
     /* Text colors */
     --text-01: #f1f1f1;
+
     --text-inverted: #6d6d6d;
-    --text-color-darker: var(--gainsboro);
-    --text-color-inverted: var(--licorice);
+    --text-inverted-darker: #373737;
 
     --primary-color: var(--light-blue);
 
     /* Theme color that changes */
     --color: #e699a6;
-    /* ["#e699a6", "#e699d2", "#cc99e6", "#9f99e6", "#99bfe6", "#99e6df", "#99e6b3", "#ace699", "#d9e699", "#e6c699"] */
+  }
+
+  ::selection {
+    background-color: #131217;
+    color: #d9e699;
   }
 
   * {
@@ -94,16 +98,7 @@ const globalStyles = css`
   }
 `
 
-const Main = styled.main`
-  display: grid;
-  grid-template-columns: 1fr 80vw 1fr;
-  grid-template-areas: 'left-gutter content right-gutter';
-  grid-auto-rows: auto;
-
-  & > * {
-    grid-area: content;
-  }
-`
+const Main = styled.main``
 
 const Layout = ({ children, navFixed }) => {
   const { title, author, description } = useSiteMetadata()

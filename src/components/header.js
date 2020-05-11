@@ -6,10 +6,11 @@ import NavButton from './nav/nav-button'
 import Nav from './nav/nav'
 import styled from '@emotion/styled'
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
   padding: 3rem 0;
   width: 100%;
   position: ${({ navFixed }) => (navFixed ? 'fixed' : 'relative')};
+  z-index: 100;
 `
 
 const HeaderContainer = styled.div`

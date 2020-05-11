@@ -3,11 +3,18 @@ import styled from '@emotion/styled'
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 80vw 1fr;
-  grid-template-areas: 'left-gutter content right-gutter';
   grid-auto-rows: auto;
+  width: 100%;
+
+  ${({ isLandingPage }) =>
+    isLandingPage &&
+    `
+    position: fixed;
+    left: 0;
+  `}
 
   & > * {
-    grid-area: content;
+    grid-column: 2 / 3;
   }
 `
 

@@ -2,13 +2,20 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 export const LandingHero = styled.section`
-  width: 100%;
-  height: 98vh;
+  height: calc(
+    99vh -
+      ${({ headerBarHeight }) =>
+        headerBarHeight ? headerBarHeight + 'px' : '0'}
+  );
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   color: var(--text-01);
+
+  h1 {
+    margin-bottom: 1rem;
+  }
 `
 
 export const Name = styled(Link)`
@@ -32,7 +39,7 @@ export const SocialList = styled.ul`
 `
 
 export const SocialListItem = styled.li`
-  margin-right: 1rem;
+  margin-right: calc(1.2rem + 1vw);
   font-weight: 400;
   font-size: calc(1rem + 1vw);
 

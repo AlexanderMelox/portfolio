@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 
 export const Profile = styled.div`
   width: 100%;
-  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,6 +9,9 @@ export const Profile = styled.div`
 
 export const HeroText = styled.h2`
   color: var(--color);
+  min-height: 23vw;
+  max-height: 35rem;
   font-size: 7vw;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  transition: color 2s ease-in-out;
 `
