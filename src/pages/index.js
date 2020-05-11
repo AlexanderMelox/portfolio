@@ -50,7 +50,7 @@ const IndexPage = () => {
       <ColorChanger>
         <motion.div initial="enter" animate="onLoad">
           <Container isLandingPage>
-            <LandingHero headerBarHeight={headerBarHeight}>
+            <LandingHero>
               <motion.h1 variants={nameVariants}>
                 <Name to="/">
                   alexander<span>melo.</span>
