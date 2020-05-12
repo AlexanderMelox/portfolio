@@ -14,5 +14,5 @@ export const HeroText = styled.h2`
   max-height: 35rem;
   font-size: 7vw;
   margin-bottom: 2rem;
-  transition: color 2s ease-in-out;
+  transition: color 2s linear;
 `

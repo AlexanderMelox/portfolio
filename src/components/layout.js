@@ -41,6 +41,7 @@ const globalStyles = css`
 
     --text-inverted: #6d6d6d;
     --text-inverted-darker: #373737;
+    --text-inverted-dark-a11y: rgba(24, 24, 24, 0.6);
 
     --primary-color: var(--light-blue);
 

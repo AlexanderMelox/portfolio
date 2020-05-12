@@ -1,7 +1,9 @@
 import React from 'react'
 import Typed from 'react-typed'
+import { css } from '@emotion/core'
+import { motion } from 'framer-motion'
 import Layout from '../components/layout'
-import Container from '../components/common/container'
+import { Container } from '../components/common'
 import { HeroText, Profile } from '../components/profile'
 import {
   LandingHero,
@@ -11,39 +13,10 @@ import {
 } from '../components/landing-hero'
 import Projects from '../components/projects'
 import { changeColor } from '../utils/keyframes'
-import { css } from '@emotion/core'
-import { motion } from 'framer-motion'
-
 import { useSiteMetadata } from '../hooks'
 
 const IndexPage = () => {
   const { socialLinks } = useSiteMetadata()
-
-  const nameVariants = {
-    enter: {
-      x: -150,
-      opacity: 0,
-    },
-    onLoad: {
-      opacity: 1,
-      x: 0,
-    },
-    transition: { duration: 0.2 },
-  }
-
-  const fadeIn = {
-    enter: { opacity: 0 },
-    onLoad: { opacity: 1 },
-  }
-
-  const socialListVariants = {
-    onLoad: { transition: { staggerChildren: 0.2, delayChildren: 1 } },
-  }
-
-  const socialListItemVariants = {
-    enter: { opacity: 0, x: -50 },
-    onLoad: { opacity: 1, x: 0 },
-  }
 
   return (
     <Layout>
@@ -102,10 +75,36 @@ const IndexPage = () => {
   )
 }
 
+const nameVariants = {
+  enter: {
+    x: -150,
+    opacity: 0,
+  },
+  onLoad: {
+    opacity: 1,
+    x: 0,
+  },
+  transition: { duration: 0.2 },
+}
+
+const fadeIn = {
+  enter: { opacity: 0 },
+  onLoad: { opacity: 1 },
+}
+
+const socialListVariants = {
+  onLoad: { transition: { staggerChildren: 0.2, delayChildren: 1 } },
+}
+
+const socialListItemVariants = {
+  enter: { opacity: 0, x: -50 },
+  onLoad: { opacity: 1, x: 0 },
+}
+
 const ColorChanger = ({ children }) => (
   <div
     css={css`
-      animation: ${changeColor} 25s infinite alternate;
+      animation: ${changeColor} 15s infinite alternate;
     `}
   >
     {children}
