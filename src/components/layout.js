@@ -9,7 +9,7 @@ import Header from './header'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const globalStyles = css`
-  ${normalize()};
+  ${normalize()}
 
   @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,900&display=swap');
   @font-face {
@@ -43,15 +43,16 @@ const globalStyles = css`
     --text-inverted-darker: #373737;
     --text-inverted-dark-a11y: rgba(24, 24, 24, 0.6);
 
-    --primary-color: var(--light-blue);
+    --primary-color: #738adb;
 
     /* Theme color that changes */
     --color: #e699a6;
+    --gradient: linear-gradient(to right, hotpink, var(--primary-color));
   }
 
   ::selection {
     background-color: #131217;
-    color: #d9e699;
+    color: white;
   }
 
   * {

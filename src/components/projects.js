@@ -1,14 +1,12 @@
 import React, { useMemo } from 'react'
 import styled from '@emotion/styled'
-import chroma from 'chroma-js'
 
 import { Container } from '../components/common'
 
 const StyledProjects = styled.section`
   width: 100%;
   padding: 6vw 0;
-  background-color: var(--color);
-  transition: background-color 2s linear;
+  background-image: var(--gradient);
   transform: translateY(calc(96vh - 92px));
 `
 
@@ -32,7 +30,7 @@ const ProjectListItem = styled.li`
   font-size: calc(1.2rem + 3vw);
   font-weight: 600;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -53,35 +51,44 @@ const ProjectListItem = styled.li`
 `
 
 const Projects = () => {
-  const projects = useMemo(() => [
-    {
-      name: 'COVID-19 GraphQL Wrapper',
-      to: 'https://github.com/AlexanderMelox/COVID19-GraphQL-Wrapper',
-      tags: 'Node && GraphQL',
-    },
-    {
-      name: 'Castle wars',
-      to: 'https://github.com/AlexanderMelox/Castle-Wars',
-      tags: 'Vuejs',
-    },
-    {
-      name: 'More projects coming soon...',
-      to: '#',
-    },
-  ])
+  const projects = useMemo(
+    () => [
+      {
+        name: 'COVID-19 GraphQL',
+        to: 'https://github.com/AlexanderMelox/COVID19-GraphQL-Wrapper',
+        tags: 'Node && GraphQL',
+      },
+      {
+        name: 'Castle wars',
+        to: 'https://github.com/AlexanderMelox/Castle-Wars',
+        tags: 'Vuejs',
+      },
+    ],
+    []
+  )
 
   return (
     <StyledProjects>
       <Container>
         <ProjectList>
-          {projects.map(project => (
+          {[].map(project => (
             <ProjectListItem>
-              <a target="_blank" href={project.to}>
+              <a rel="noopener noreferrer" target="_blank" href={project.to}>
                 {project.name}
               </a>
               <ProjectTag>{project.tags}</ProjectTag>
             </ProjectListItem>
           ))}
+          <ProjectListItem>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              onClick={e => e.preventDefault()}
+              target="_blank"
+            >
+              👷🏼‍♂️Site is still under construction.
+            </a>
+          </ProjectListItem>
         </ProjectList>
       </Container>
     </StyledProjects>

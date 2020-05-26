@@ -1,32 +1,17 @@
 import React from 'react'
 import styled from '@emotion/styled'
-
-const Bar = styled.span`
-  position: absolute;
-  width: 100%;
-  border-radius: 2px;
-  height: 2px;
-  background-color: #fff;
-  left: 0;
-  transition: all 200ms;
-`
-
-const TopBar = styled(Bar)`
-  top: 0;
-  transform-origin: left;
-  ${props => props.isNavOpen && 'transform: rotate(45deg)'}
-`
-const BottomBar = styled(Bar)`
-  bottom: 0;
-  transform-origin: right;
-  ${props => props.isNavOpen && 'transform: rotate(45deg);'}
-`
+import { motion } from 'framer-motion'
 
 const Button = styled.button`
   outline: none;
   border: none;
   width: 2.4rem;
   height: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   background-color: transparent;
   cursor: pointer;
@@ -39,9 +24,37 @@ const Button = styled.button`
 
 const NavButton = ({ setIsNavOpen, isNavOpen }) => {
   return (
-    <Button onClick={setIsNavOpen}>
-      <TopBar isNavOpen={isNavOpen} />
-      <BottomBar isNavOpen={isNavOpen} />
+    <Button onClick={() => setIsNavOpen(prevState => !prevState)}>
+      <motion.div
+        style={{ width: '24px', height: '2px', background: 'white' }}
+        variants={{
+          closed: {
+            rotate: 0,
+            y: 0,
+          },
+          open: {
+            y: 5,
+            rotate: 45,
+          },
+        }}
+        initial={false}
+        animate={isNavOpen ? 'open' : 'closed'}
+      />
+      <motion.div
+        style={{ width: '24px', height: '2px', background: 'white' }}
+        initial={false}
+        variants={{
+          closed: {
+            rotate: 0,
+            y: 0,
+          },
+          open: {
+            y: -5,
+            rotate: -45,
+          },
+        }}
+        animate={isNavOpen ? 'open' : 'closed'}
+      />
     </Button>
   )
 }

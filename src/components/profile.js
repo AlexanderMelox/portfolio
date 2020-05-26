@@ -10,6 +10,10 @@ export const Profile = styled(motion.div)`
 
 export const HeroText = styled.h2`
   color: var(--color);
+  background-image: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   min-height: 23vw;
   max-height: 35rem;
   font-size: 7vw;
