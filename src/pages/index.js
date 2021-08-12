@@ -1,20 +1,20 @@
-import React from "react";
-import Typed from "react-typed";
-import { motion } from "framer-motion";
-import Layout from "../components/layout";
-import { Container } from "../components/common";
-import { HeroText, Profile } from "../components/profile";
+import React from 'react'
+import Typed from 'react-typed'
+import { motion } from 'framer-motion'
+import Layout from '../components/layout'
+import { Container } from '../components/common'
+import { HeroText, Profile } from '../components/profile'
 import {
   LandingHero,
   Name,
   SocialList,
   SocialListItem,
-} from "../components/landing-hero";
-import Projects from "../components/projects";
-import { useSiteMetadata } from "../hooks";
+} from '../components/landing-hero'
+import Projects from '../components/projects'
+import { useSiteMetadata } from '../hooks'
 
 const IndexPage = () => {
-  const { socialLinks } = useSiteMetadata();
+  const { socialLinks } = useSiteMetadata()
 
   return (
     <Layout>
@@ -29,10 +29,7 @@ const IndexPage = () => {
             <Profile variants={fadeIn} transition={{ delay: 0.2, duration: 1 }}>
               <HeroText>
                 <Typed
-                  strings={[
-                    "User Experience Engineer working for IBM in Austin.",
-                    "Solving user's needs. One prototype at a time.",
-                  ]}
+                  strings={['User Experience Engineer at IBM.']}
                   typeSpeed={40}
                   backSpeed={20}
                   backDelay={3000}
@@ -45,9 +42,10 @@ const IndexPage = () => {
                 animate="onLoad"
                 variants={socialListVariants}
               >
-                {socialLinks.map((link) => {
+                {socialLinks.map(link => {
                   return (
                     <SocialListItem
+                      key={link.name}
                       variants={socialListItemVariants}
                       whileHover={{ y: -5 }}
                     >
@@ -59,7 +57,7 @@ const IndexPage = () => {
                         {link.name}
                       </a>
                     </SocialListItem>
-                  );
+                  )
                 })}
               </SocialList>
             </Profile>
@@ -68,8 +66,8 @@ const IndexPage = () => {
         <Projects />
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
 const nameVariants = {
   enter: {
@@ -81,20 +79,20 @@ const nameVariants = {
     x: 0,
   },
   transition: { duration: 0.2 },
-};
+}
 
 const fadeIn = {
   enter: { opacity: 0 },
   onLoad: { opacity: 1 },
-};
+}
 
 const socialListVariants = {
   onLoad: { transition: { staggerChildren: 0.2, delayChildren: 1 } },
-};
+}
 
 const socialListItemVariants = {
   enter: { opacity: 0, x: -50 },
   onLoad: { opacity: 1, x: 0 },
-};
+}
 
-export default IndexPage;
+export default IndexPage
