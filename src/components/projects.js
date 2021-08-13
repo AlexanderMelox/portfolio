@@ -51,7 +51,7 @@ const ImageBorder = styled.div`
   background: var(--gradient);
   border-radius: 2.5rem;
   padding: 5px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `
 
 const ProjectListItem = styled(motion.li)`
@@ -78,12 +78,16 @@ const ProjectListItem = styled(motion.li)`
   }
 
   p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: var(--text-inverted);
     font-weight: 400;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
+
+    ${mq[0]} {
+      font-size: 2.5rem;
+    }
   }
 `
 
