@@ -6,6 +6,7 @@ import melodoro from '../images/melodoro.png'
 import austincold from '../images/austincold.png'
 import castlewars from '../images/castle-wars.png'
 import framer from '../images/framer.png'
+import devjobs from '../images/devjobs.png'
 
 import { Container } from '../components/common'
 
@@ -111,6 +112,13 @@ const Projects = () => {
         desc:
           'A pomodoro app built with React and styled components. This project focuses on micro interactions and how web based animations can make using UI playful and fun.',
         image: melodoro,
+      },
+      {
+        name: 'devjobs',
+        to: 'https://devjobs-melo.netlify.app/',
+        desc:
+          '⚠️WORK IN PROGRESS⚠️ A web app build with React, ChakraUI and Typescript to help developers find jobs.',
+        image: devjobs,
       },
       {
         name: 'Austin cold',
