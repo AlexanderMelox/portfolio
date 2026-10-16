@@ -1,0 +1,110 @@
+/*
+  Three columns: name | memoji | links.
+  "1fr auto 1fr" gives both sides the same width, so the memoji in the
+  middle column lands in the true center of the page, even though the
+  name and the links are different lengths.
+*/
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding-block: 24px;
+}
+
+/* On narrow screens: name and memoji on one row, links below. */
+@media (max-width: 720px) {
+  .header {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'brand avatar'
+      'nav nav';
+  }
+
+  .brand {
+    grid-area: brand;
+  }
+
+  .avatarLink {
+    grid-area: avatar;
+  }
+
+  .nav {
+    grid-area: nav;
+    justify-content: flex-start;
+    margin-left: -14px; /* line the first link's text up with the name */
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--ink);
+  justify-self: start;
+}
+
+.monogram {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 6px 8px;
+  border: 1.5px solid var(--ink);
+  border-radius: 7px;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+}
+
+.avatarLink {
+  display: block;
+  border-radius: 50%;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow:
+    0 0 0 3px var(--paper),
+    0 10px 24px -10px rgba(30, 26, 21, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.avatarLink:hover .avatar {
+  transform: rotate(-6deg) scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar {
+    transition: none;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.link {
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.active {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}

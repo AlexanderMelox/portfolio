@@ -1,0 +1,218 @@
+{
+  "profile": {
+    "id": 1,
+    "name": "Alexander Melo",
+    "monogram": "am/",
+    "status": "software engineer",
+    "avatar": null,
+    "greeting": "Hi, I'm Alex 👋",
+    "headline": "I create human interfaces in an age of AI.",
+    "headlineEmphasis": "human",
+    "intro": "I’m a software engineer in New York City with 8 years of experience building interfaces on top of design systems. For 5+ years I’ve been a core contributor to IBM’s Carbon Design System. Today I build the components behind Carbon AI Chat, made to work for both the developers and the AI agents who build with them.",
+    "codeCard": {
+      "variable": "alex",
+      "role": "Software engineer",
+      "basedIn": "NYC",
+      "currently": "IBM · Carbon AI Chat",
+      "interests": [
+        "tinkering",
+        "board games",
+        "video games",
+        "film"
+      ],
+      "stack": [
+        "Typescript",
+        "React",
+        "Lit",
+        "NodeJS",
+        "Next.js"
+      ]
+    },
+    "workTitle": "Things I've built",
+    "workIntro": "A mix of day-job work, side projects and experiments, with notes on how they came together.",
+    "experienceTitle": "Where I've been",
+    "writingTitle": "Notes from the workbench",
+    "blogIntro": "Welcome to my brain dump",
+    "experience": [
+      {
+        "id": "6ad21b7b87a717c52cd3444f",
+        "dates": "2030 — now",
+        "role": "Front-end Developer ",
+        "org": "IBM Carbon Design System",
+        "description": "Carbon Design System team. Building Carbon AI Chat, leading the docs platform rebuild, and helping acquired products adopt Carbon."
+      },
+      {
+        "id": "6ad228a9ba8b323c0c0d92ec",
+        "dates": "2023 — now",
+        "role": "NYC Chapter Lead · FED@IBM",
+        "org": "Open Innovation Studios",
+        "description": "Launched local FED@IBM Branch in One Madison Avenue NYC. Grew the chapter by 50% with regular meetups and talks, and mentor the co-organizers."
+      },
+      {
+        "id": "6ad21a7687a717c52cd3444d",
+        "dates": "2019 — 2022",
+        "role": "User Experience Engineer",
+        "org": "IBM Watson AI Ops",
+        "description": "Watson AI Ops. Built React prototypes and a shared component library, and designed animations that guide people through complex AI workflows."
+      },
+      {
+        "id": "6ad22900ba8b323c0c0d92ee",
+        "dates": "2018",
+        "role": "Associate’s in Science",
+        "org": "Borough of Manhattan Community College",
+        "description": "Graduated with 3.8 GPA Multi-media programming. Program consisted of Adobe Photoshop, After Effects, Illustrator; Web design & developement; Video Arts Technology; Game design; P5.js using generate art and more. \n\nSupplemental Instructor and Tutor on Campus."
+      }
+    ],
+    "resume": {
+      "id": 1,
+      "alt": "Alexander Melo's Resume",
+      "updatedAt": "2026-10-16T12:42:28.523Z",
+      "createdAt": "2026-10-16T12:42:28.523Z",
+      "url": "/api/media/file/Alexander_Melo_Resume-v2.pdf",
+      "thumbnailURL": null,
+      "filename": "Alexander_Melo_Resume-v2.pdf",
+      "mimeType": "application/pdf",
+      "filesize": 30280,
+      "width": null,
+      "height": null,
+      "focalX": null,
+      "focalY": null
+    },
+    "contactBlurb": "’m always happy to talk shop about design systems, AI interfaces, or whatever you’re building. I also run FED@IBM’s NYC meetups, so say hi if you’re local.",
+    "email": "alexandermelox@gmail.com",
+    "socials": [
+      {
+        "id": "6ad229beba8b323c0c0d92f0",
+        "label": "Github",
+        "url": "https://github.com/AlexanderMelox"
+      },
+      {
+        "id": "6ad22a03ba8b323c0c0d92f2",
+        "label": "Instagram",
+        "url": "https://www.instagram.com/melo_codes/"
+      },
+      {
+        "id": "6ad22ab4ba8b323c0c0d92f4",
+        "label": "X",
+        "url": "https://x.com/melo_codes"
+      }
+    ],
+    "siteDescription": null,
+    "updatedAt": "2026-10-16T13:47:52.361Z",
+    "createdAt": "2026-10-16T12:34:27.841Z",
+    "globalType": "profile"
+  },
+  "projects": [
+    {
+      "id": 5,
+      "title": "Carbon AI Chat",
+      "category": "work",
+      "eyebrow": "IBM · Workflows",
+      "summary": "React and Lit components for AI chat interfaces, used across IBM products. The component APIs are designed so both developers and AI agents can build with Carbon.",
+      "tags": [
+        "react",
+        "lit",
+        "chat ui"
+      ],
+      "preview": "image",
+      "image": null,
+      "previewCode": null,
+      "url": null,
+      "post": null,
+      "slug": "carbon-ai-chat",
+      "featured": true,
+      "sortOrder": 0,
+      "updatedAt": "2026-10-16T13:34:07.234Z",
+      "createdAt": "2026-10-16T13:34:07.234Z"
+    },
+    {
+      "id": 4,
+      "title": "Carbon’s documentation platform",
+      "category": "web-app",
+      "eyebrow": "IBM · Carbon Experience Platform",
+      "summary": "Front-end architecture for moving Carbon’s docs from Gatsby to Next.js, Payload CMS and MongoDB. Content now publishes 3x faster. The work also included a database migration with zero downtime, role-based access for multiple teams, with live docs editing with Live preview.",
+      "tags": [
+        "nextjs",
+        "payload",
+        "mongodb"
+      ],
+      "preview": "image",
+      "image": null,
+      "previewCode": null,
+      "url": "https://www.carbondesignsystem.com/",
+      "post": null,
+      "slug": "carbons-documentation-platform",
+      "featured": true,
+      "sortOrder": 1,
+      "updatedAt": "2026-10-16T13:34:23.560Z",
+      "createdAt": "2026-10-16T13:33:03.357Z"
+    },
+    {
+      "id": 3,
+      "title": "An AI-ready design system",
+      "category": "side-project",
+      "eyebrow": "BM · Design system",
+      "summary": "Converted 100+ components into structured data so AI assistants can build with Carbon accurately.",
+      "tags": [
+        "ai",
+        "mcp",
+        "docs"
+      ],
+      "preview": "image",
+      "image": null,
+      "previewCode": null,
+      "url": "https://carbondesignsystem.com/",
+      "post": null,
+      "slug": "an-ai-ready-design-system",
+      "featured": true,
+      "sortOrder": 2,
+      "updatedAt": "2026-10-16T13:34:35.893Z",
+      "createdAt": "2026-10-16T13:29:16.730Z"
+    },
+    {
+      "id": 2,
+      "title": "DataTable for Carbon for IBM Products",
+      "category": "work",
+      "eyebrow": "IBM · Open source",
+      "summary": "Maintained and improved a DataTable with 40+ plugins, a key building block for enterprise apps. Added test coverage reporting with CodeCov to Carbon for IBM Products.",
+      "tags": [
+        "react",
+        "testing",
+        "component api"
+      ],
+      "preview": "image",
+      "image": null,
+      "previewCode": null,
+      "url": "https://github.com/carbon-design-system/ibm-products",
+      "post": null,
+      "slug": "carbon-for-ibm-products",
+      "featured": true,
+      "sortOrder": 3,
+      "updatedAt": "2026-10-16T13:36:11.035Z",
+      "createdAt": "2026-10-16T13:06:15.384Z"
+    },
+    {
+      "id": 1,
+      "title": "Bringing Instana and SevOne onto Carbon",
+      "category": "work",
+      "eyebrow": "IBM · Migrations",
+      "summary": "Led two acquired products onto Carbon Design System. Audited component and accessibility gaps between system and migrated over 30+ components over for SevOne saving teams 1000+ developer hours.",
+      "tags": [
+        "design system",
+        "feature flags",
+        "a11y"
+      ],
+      "preview": "image",
+      "image": null,
+      "previewCode": null,
+      "url": null,
+      "post": null,
+      "slug": "bringing-instana-and-sevone-onto-carbon",
+      "featured": true,
+      "sortOrder": 4,
+      "updatedAt": "2026-10-16T13:34:48.426Z",
+      "createdAt": "2026-10-16T13:02:16.405Z"
+    }
+  ],
+  "posts": []
+}

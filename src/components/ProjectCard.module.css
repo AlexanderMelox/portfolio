@@ -1,0 +1,153 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* ---- Previews ---- */
+
+.chat,
+.code,
+.placeholder,
+.imageWrap {
+  height: 200px;
+}
+
+.chat {
+  background: var(--paper-sunk);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.bubbleThem,
+.bubbleMe {
+  padding: 10px 14px;
+  max-width: 80%;
+}
+
+.bubbleThem {
+  align-self: flex-start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px 14px 14px 4px;
+}
+
+.bubbleMe {
+  align-self: flex-end;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: 14px 14px 4px 14px;
+}
+
+.typing {
+  display: flex;
+  gap: 5px;
+  padding: 8px 4px;
+}
+
+.typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9c907e;
+}
+
+.typing span:nth-child(2) {
+  background: #b5aa98;
+}
+
+.typing span:nth-child(3) {
+  background: #cfc5b4;
+}
+
+.code {
+  margin: 0;
+  padding: 22px 24px;
+  background: var(--code-bg);
+  color: var(--code-ink);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow: hidden;
+}
+
+.jsonKey {
+  color: var(--code-key);
+}
+
+.jsonString {
+  color: var(--code-string);
+}
+
+.imageWrap {
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.placeholder {
+  margin: 16px 16px 0;
+  border: 1.5px dashed #cfc5b4;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--subtle);
+}
+
+/* ---- Body ---- */
+
+.body {
+  flex: 1;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.summary {
+  margin: 0;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+
+.tags {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 8px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

@@ -1,0 +1,267 @@
+/* ---------- Hero ---------- */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 56px;
+  padding-top: 104px;
+  padding-bottom: 136px;
+}
+
+.heroText {
+  flex: 999 1 560px;
+  min-width: 0;
+}
+
+.heroCode {
+  flex: 1 1 340px;
+  min-width: 0;
+}
+
+.status {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+}
+
+.headline {
+  margin: 28px 0 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.greeting {
+  display: block;
+}
+
+.emphasis {
+  color: var(--accent);
+}
+
+.intro {
+  margin: 32px 0 0;
+  max-width: 620px;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.actions {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding-top: 48px;
+  padding-bottom: 112px;
+  scroll-margin-top: 24px;
+}
+
+.sectionHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.sectionIntro {
+  margin: 0;
+  max-width: 380px;
+  color: var(--muted);
+}
+
+.empty {
+  color: var(--muted);
+}
+
+/* auto-fill makes as many 320px+ columns as fit, so it wraps on its own. */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 24px;
+}
+
+/* ---------- Experience ---------- */
+
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.experienceHead {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.resume {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.timeline {
+  flex: 999 1 560px;
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.timelineItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  padding: 28px 32px;
+}
+
+.timelineItem + .timelineItem {
+  border-top: 1px solid var(--line);
+}
+
+.dates {
+  flex: 0 0 150px;
+  padding-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--subtle);
+}
+
+.role {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.role h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.role p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+/* ---------- Writing ---------- */
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line-strong);
+}
+
+/* ---------- Contact ---------- */
+
+.contactWrap {
+  padding-top: 48px;
+  padding-bottom: 40px;
+  scroll-margin-top: 24px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 64px 48px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: 40px 28px;
+  }
+}
+
+.contactCopy {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.contactTitle {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 80px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.contactBlurb {
+  margin: 20px 0 0;
+  max-width: 460px;
+  font-size: 18px;
+  color: #cfc5b4;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 15px;
+}
+
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.socials a {
+  display: inline-block;
+  padding: 12px 10px;
+  color: var(--paper);
+}
+
+.socials a:hover {
+  color: var(--field);
+}

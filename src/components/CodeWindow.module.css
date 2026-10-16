@@ -1,0 +1,36 @@
+.window {
+  margin: 0;
+  min-width: 0;
+  background: var(--code-bg);
+  color: var(--code-ink);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -30px rgba(30, 26, 21, 0.55);
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--code-line);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--code-muted);
+}
+
+.code {
+  margin: 0;
+  padding: 22px 20px 26px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+.keyword {
+  color: var(--code-keyword);
+}
+
+.string {
+  color: var(--code-key);
+}
