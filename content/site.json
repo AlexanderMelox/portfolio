@@ -36,14 +36,14 @@
     "experience": [
       {
         "id": "6ad21b7b87a717c52cd3444f",
-        "dates": "2030 — now",
+        "dates": "2023 — now",
         "role": "Front-end Developer ",
         "org": "IBM Carbon Design System",
         "description": "Carbon Design System team. Building Carbon AI Chat, leading the docs platform rebuild, and helping acquired products adopt Carbon."
       },
       {
         "id": "6ad228a9ba8b323c0c0d92ec",
-        "dates": "2023 — now",
+        "dates": "2025 — now",
         "role": "NYC Chapter Lead · FED@IBM",
         "org": "Open Innovation Studios",
         "description": "Launched local FED@IBM Branch in One Madison Avenue NYC. Grew the chapter by 50% with regular meetups and talks, and mentor the co-organizers."
@@ -78,7 +78,7 @@
       "focalX": null,
       "focalY": null
     },
-    "contactBlurb": "’m always happy to talk shop about design systems, AI interfaces, or whatever you’re building. I also run FED@IBM’s NYC meetups, so say hi if you’re local.",
+    "contactBlurb": "I’m always happy to talk about design systems, AI interfaces, or whatever you’re building. I also run FED@IBM’s NYC meetups, so say hi if you’re local.",
     "email": "alexandermelox@gmail.com",
     "socials": [
       {
@@ -98,7 +98,7 @@
       }
     ],
     "siteDescription": null,
-    "updatedAt": "2026-10-16T13:47:52.361Z",
+    "updatedAt": "2026-10-16T20:30:31.374Z",
     "createdAt": "2026-10-16T12:34:27.841Z",
     "globalType": "profile"
   },
@@ -115,14 +115,28 @@
         "chat ui"
       ],
       "preview": "image",
-      "image": null,
+      "image": {
+        "id": 3,
+        "alt": "carbon ai chat",
+        "updatedAt": "2026-10-16T20:22:50.069Z",
+        "createdAt": "2026-10-16T20:22:50.069Z",
+        "url": "/api/media/file/carbon-ai-chat.webp",
+        "thumbnailURL": null,
+        "filename": "carbon-ai-chat.webp",
+        "mimeType": "image/webp",
+        "filesize": 30184,
+        "width": 1440,
+        "height": 800,
+        "focalX": 50,
+        "focalY": 50
+      },
       "previewCode": null,
       "url": null,
       "post": null,
       "slug": "carbon-ai-chat",
       "featured": true,
       "sortOrder": 0,
-      "updatedAt": "2026-10-16T13:34:07.234Z",
+      "updatedAt": "2026-10-16T20:23:05.071Z",
       "createdAt": "2026-10-16T13:34:07.234Z"
     },
     {
@@ -137,14 +151,28 @@
         "mongodb"
       ],
       "preview": "image",
-      "image": null,
+      "image": {
+        "id": 4,
+        "alt": "carbon docs",
+        "updatedAt": "2026-10-16T20:22:50.141Z",
+        "createdAt": "2026-10-16T20:22:50.141Z",
+        "url": "/api/media/file/carbon-docs-platform.webp",
+        "thumbnailURL": null,
+        "filename": "carbon-docs-platform.webp",
+        "mimeType": "image/webp",
+        "filesize": 28200,
+        "width": 1440,
+        "height": 800,
+        "focalX": 50,
+        "focalY": 50
+      },
       "previewCode": null,
       "url": "https://www.carbondesignsystem.com/",
       "post": null,
       "slug": "carbons-documentation-platform",
       "featured": true,
       "sortOrder": 1,
-      "updatedAt": "2026-10-16T13:34:23.560Z",
+      "updatedAt": "2026-10-16T20:23:15.892Z",
       "createdAt": "2026-10-16T13:33:03.357Z"
     },
     {
@@ -159,14 +187,28 @@
         "docs"
       ],
       "preview": "image",
-      "image": null,
+      "image": {
+        "id": 2,
+        "alt": "ai ready graphic",
+        "updatedAt": "2026-10-16T20:22:49.994Z",
+        "createdAt": "2026-10-16T20:22:49.994Z",
+        "url": "/api/media/file/ai-ready-design-system.webp",
+        "thumbnailURL": null,
+        "filename": "ai-ready-design-system.webp",
+        "mimeType": "image/webp",
+        "filesize": 25174,
+        "width": 1440,
+        "height": 800,
+        "focalX": 50,
+        "focalY": 50
+      },
       "previewCode": null,
       "url": "https://carbondesignsystem.com/",
       "post": null,
       "slug": "an-ai-ready-design-system",
       "featured": true,
       "sortOrder": 2,
-      "updatedAt": "2026-10-16T13:34:35.893Z",
+      "updatedAt": "2026-10-16T20:26:12.150Z",
       "createdAt": "2026-10-16T13:29:16.730Z"
     },
     {
@@ -181,14 +223,28 @@
         "component api"
       ],
       "preview": "image",
-      "image": null,
+      "image": {
+        "id": 5,
+        "alt": "datatable in carbon for ibm products",
+        "updatedAt": "2026-10-16T20:22:50.214Z",
+        "createdAt": "2026-10-16T20:22:50.214Z",
+        "url": "/api/media/file/datatable.webp",
+        "thumbnailURL": null,
+        "filename": "datatable.webp",
+        "mimeType": "image/webp",
+        "filesize": 32918,
+        "width": 1440,
+        "height": 800,
+        "focalX": 50,
+        "focalY": 50
+      },
       "previewCode": null,
       "url": "https://github.com/carbon-design-system/ibm-products",
       "post": null,
       "slug": "carbon-for-ibm-products",
       "featured": true,
       "sortOrder": 3,
-      "updatedAt": "2026-10-16T13:36:11.035Z",
+      "updatedAt": "2026-10-16T20:26:22.267Z",
       "createdAt": "2026-10-16T13:06:15.384Z"
     },
     {
@@ -203,14 +259,28 @@
         "a11y"
       ],
       "preview": "image",
-      "image": null,
+      "image": {
+        "id": 6,
+        "alt": "carbon migrations",
+        "updatedAt": "2026-10-16T20:22:50.290Z",
+        "createdAt": "2026-10-16T20:22:50.290Z",
+        "url": "/api/media/file/instana-sevone-migration.webp",
+        "thumbnailURL": null,
+        "filename": "instana-sevone-migration.webp",
+        "mimeType": "image/webp",
+        "filesize": 29768,
+        "width": 1440,
+        "height": 800,
+        "focalX": 50,
+        "focalY": 50
+      },
       "previewCode": null,
       "url": null,
       "post": null,
       "slug": "bringing-instana-and-sevone-onto-carbon",
       "featured": true,
       "sortOrder": 4,
-      "updatedAt": "2026-10-16T13:34:48.426Z",
+      "updatedAt": "2026-10-16T20:26:30.310Z",
       "createdAt": "2026-10-16T13:02:16.405Z"
     }
   ],
